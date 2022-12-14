@@ -35,7 +35,7 @@ body {
 .text-box {
     margin-top: 200px;
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     height: 600px;
     margin-left: 80px;
     align-self: center;
@@ -47,7 +47,6 @@ body {
     font-weight: 400;
     font-size: 32px;
     width: 100%;
-    max-width: 577px;
     height: 450px;
     background-color: transparent;
     resize: none;
@@ -65,8 +64,7 @@ body {
     text-align: center;
     margin-left: 100px;
     width: 100%;
-    max-width: 577px;
-    min-width: 450px;
+    max-width: 425px;
     height: 800px;
     background-color: white;    
     border-radius: 32px;
@@ -83,7 +81,7 @@ body {
 }
 
 .text-not-found h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .output-container {
@@ -111,9 +109,13 @@ body {
 
 .alert {
     display: flex;
-    flex-wrap: nowrap;
     gap: 10px;
     margin-bottom: 15px;
+}
+
+.alert img {
+    width: 100%;
+    max-width: 20px
 }
 
 .button-box{  
@@ -165,6 +167,7 @@ body {
         padding: 0px;
     }
     .encriptador {
+        align-items: center;
         flex-direction: column;
     }
 
@@ -213,7 +216,13 @@ body {
     }
 
     .btn-copy {
-        width: 100%
+        width: 250px
     }
 
+}
+
+@media (max-width: 768px) {
+    .encriptador {
+        align-items: flex-start;
+    }
 }
