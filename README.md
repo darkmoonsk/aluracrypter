@@ -7,7 +7,9 @@ Você pode acessar este projeto em funcionamento no link: https://aluracrypter.b
 
 ## ⚒ Tecnologias usadas
 HTML
+
 CSS
+
 Javascript
 
 ## 📑Descrição das funcionalidades
