@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     width: 1440px;
-    height: 1024px;
+    height: 800px;
     padding: 10px 0;
 }
 
@@ -32,9 +32,9 @@ body {
 }
 
 .text-box {
-    margin-top: 270px;
-    width: 700px;
-    height: 800px;
+    margin-top: 200px;
+    width: 600px;
+    height: 600px;
     margin-left: 80px;
     align-self: center;
 }
@@ -46,7 +46,7 @@ body {
     font-size: 32px;
     width: 100%;
     max-width: 577px;
-    height: 577px;
+    height: 450px;
     background-color: transparent;
     resize: none;
     border: none;
@@ -62,9 +62,8 @@ body {
     justify-content: flex-end;
     text-align: center;
     margin-left: 100px;
-    margin-top: 25px;
     min-width: 450px;
-    height: 944px;
+    height: 800px;
     background-color: white;    
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -94,7 +93,7 @@ body {
 }
 
 .output {
-    color: #0A3871;
+    color: #495057;
     resize: none;
     border: none;
     background: transparent;
@@ -102,7 +101,7 @@ body {
     height: 100%;
     text-align: left;
     margin-top: 30px;;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
