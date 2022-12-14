@@ -1,4 +1,4 @@
-const text = document.querySelector(".text");
+const textInput = document.querySelector(".text");
 const textOutput = document.querySelector(".text-output");
 const output = document.querySelector(".output");
 const outputContainer = document.querySelector(".output-container");
@@ -30,31 +30,30 @@ const aluracrypter = {
     },
 };
 
-buttonEncode.onclick = () => {
-    const encodedText = aluracrypter.encoder(text.value);
-    if(!encodedText){
+const resetInputAndShowOutput = (text) => {
+    if(!text){
+        textNotFound.classList.remove("hidden");
+        outputContainer.classList.add("hidden");
         return;
     }
-    output.value = encodedText;
-    textNotFound.classList.add("alert-hidden");
-    outputContainer.classList.remove("alert-hidden");
-    text.value = "";
+    output.value = text;
+    textNotFound.classList.add("hidden");
+    outputContainer.classList.remove("hidden");
+    textInput.value = "";
+}
+
+buttonEncode.onclick = () => {
+    const encodedText = aluracrypter.encoder(textInput.value);
+    resetInputAndShowOutput(encodedText);
 };
 
 buttonDecode.onclick = () => {
-    const decodedText = aluracrypter.decoder(text.value);
-    if(!decodedText){
-        return;
-    }
-    output.value = decodedText;
-    textNotFound.classList.add("alert-hidden");
-    output.classList.remove("alert-hidden");
-    text.value = "";
-
+    const decodedText = aluracrypter.decoder(textInput.value);
+    resetInputAndShowOutput(decodedText);
 };
 
 buttonCopy.onclick = () => {
-    const textCopied = document.querySelector(".output").value;
+    const textCopied = output.value;
     navigator.clipboard.writeText(textCopied);
 };
 
