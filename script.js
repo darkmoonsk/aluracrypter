@@ -39,7 +39,7 @@ buttonEncode.onclick = () => {
     output.value = encodedText;
     textNotFound.classList.add("alert-hidden");
     outputContainer.classList.remove("alert-hidden");
-
+    text.value = "";
 };
 
 buttonDecode.onclick = () => {
@@ -50,6 +50,7 @@ buttonDecode.onclick = () => {
     output.value = decodedText;
     textNotFound.classList.add("alert-hidden");
     output.classList.remove("alert-hidden");
+    text.value = "";
 
 };
 
@@ -57,3 +58,4 @@ buttonCopy.onclick = () => {
     const textCopied = document.querySelector(".output").value;
     navigator.clipboard.writeText(textCopied);
 };
+
