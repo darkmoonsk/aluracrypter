@@ -13,4 +13,4 @@ Você pode acessar este projeto em funcionamento no link: https://aluracrypter.b
  - Javascript
  
 ## 📑Descrição das funcionalidades
-Possui uma área para entrada de texto e uma saída para onde irá o texto codificado ou decodificado, texto passará por um processo onde as vogais "e, i, a, o, u" serão substituídas por "enter, imes, ai, ober, ufat" respectivamente, e estas são as chaves para decodificar o código gerado. Para decodificar o algoritmo utiliza as chaves transformando-as em suas respectivas vogais. 
+Possui uma área para entrada de texto e uma saída para onde irá o texto codificado ou decodificado. O texto passará por um processo onde as vogais "e, i, a, o, u" serão substituídas por "enter, imes, ai, ober, ufat" respectivamente, e estas são as chaves para decodificar o código gerado. Para decodificar, o algoritmo utiliza as chaves anteriormente descritas transformando-as em suas respectivas vogais. 
