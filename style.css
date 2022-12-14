@@ -21,6 +21,7 @@ body {
 
 .encriptador {
     display: flex;
+    flex-wrap: nowrap;
     width: 1440px;
     height: 1024px;
     padding: 10px 0;
@@ -31,10 +32,11 @@ body {
 }
 
 .text-box {
+    margin-top: 270px;
+    width: 700px;
+    height: 800px;
+    margin-left: 80px;
     align-self: center;
-    width: 577px;
-    max-height: 577px;
-    margin-left: 100px;
 }
 
 .text-box textarea {
@@ -42,7 +44,8 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    width: 577px;
+    width: 100%;
+    max-width: 577px;
     height: 577px;
     background-color: transparent;
     resize: none;
@@ -54,20 +57,146 @@ body {
 }
 
 .text-output {   
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
     margin-left: 100px;
     margin-top: 25px;
-    max-width: 450px;
+    min-width: 450px;
     height: 944px;
     background-color: white;    
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
+.text-not-found {
+    margin-bottom: 250px;
+    padding: 0px 60px;
+}
+
+.text-not-found img {
+    margin-bottom: 25px;
+}
+
+.text-not-found h2 {
+    font-size: 30px;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 50px;
+    padding: 0px 30px;
+}
+
+.output {
+    color: #0A3871;
+    resize: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    margin-top: 30px;;
+    font-size: 25px;
+}
+
+
+.alert {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.button-box{  
+    display: flex;
+    gap: 20px;
+}
+
 .btn-encode {
-    width: 328px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    width: 332px;
     height: 67px;
     padding: 24px;
     background: #0A3871;
     border-radius: 24px;
+}
+
+.btn-decode {
+    cursor: pointer;
+    color: #0A3871;
+    font-size: 20px;
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+.btn-copy {
+    cursor: pointer;
+    color: #0A3871;
+    font-size: 20px;
+    width: 332px;
+    height: 67px;
+    padding: 24px;
+    background: transparent;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+.alert-hidden {
+    display: none;
+}
+
+@media (max-width: 1450px) {
+    .encriptador {
+        flex-direction: column;
+    }
+
+    .text-box {
+        align-self: inherit;
+    }
+
+    .text-output {
+        margin-top: 50px;
+        margin-left: 80px;
+        width: 100%;
+        max-width: 577px;
+        height: 100%;
+    }
+
+    .text-not-found {
+        margin: 0px;
+        padding: 30px;
+    }
+
+    .text-not-found img {
+        display: none;
+    }
+
+    .output-container{
+        margin-top: 40px;
+    }
+
+    .button-box {
+        justify-content: column;
+        flex-wrap: wrap;
+    }
+
+    .btn-encode {
+        width: 100%
+    }
+
+    .btn-decode {
+        width: 100%
+    }
+
 }

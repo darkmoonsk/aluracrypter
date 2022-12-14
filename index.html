@@ -15,21 +15,40 @@
                 </div>
                 <div class="text-box">
                     <textarea
+                        type="text"
                         autofocus
+                        maxlength="300"
                         placeholder="Digite o seu texto"
+                        class="text"
                     ></textarea>
                     <div class="button-area">
-                      <img src="/images/alert.png" />
-                      <span>Apenas letras minúsculas e sem acento.</span>
-                      <div>
-                        <button class="btn-encode">Criptografar</button>
-                        <button class="btn-decode">Descriptografar</button>
-                        <button></button>
-                      </div>
+                        <div class="alert">
+                            <img src="/images/alert.png" />
+                            <span>Apenas letras minúsculas e sem acento.</span>
+                        </div>
+                        <div class="button-box">
+                            <button class="btn-encode">Criptografar</button>
+                            <button class="btn-decode">Descriptografar</button>
+                        </div>
                     </div>
                 </div>
-                <div class="text-output"></div>
+                <div class="text-output">
+                    <div class="output-container alert-hidden">
+                        <textarea disabled class="output"> </textarea>
+                        <button class="btn-copy">Copiar</button>
+                    </div>
+                    <div class="text-not-found">
+                        <img src="/images/found.png" />
+                        <h2>Nenhuma mensagem encontrada</h2>
+                        <p>
+                            Digite um texto que você deseja criptografar ou
+                            descriptografar.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+
+    <script type="module" src="script.js"></script>
 </html>

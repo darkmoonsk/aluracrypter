@@ -1,24 +1,33 @@
-const aluracrypter = {
+export const aluracrypter = {
     encoder: function (text) {
-        
-        const textEncoded = text.replaceAll("e", "enter")
-            .replaceAll("i", "imes")
-            .replaceAll("a", "ai")
-            .replaceAll("o", "ober")
-            .replaceAll("u", "ufat");
+       if(text.includes("e") || text.includes("i") || text.includes("a") 
+       || text.includes("o") || text.includes("u")){ 
+            const textEncoded = text.replaceAll("e", "enter")
+                .replaceAll("i", "imes")
+                .replaceAll("a", "ai")
+                .replaceAll("o", "ober")
+                .replaceAll("u", "ufat");
 
-        return textEncoded;   
+            return textEncoded;
+        } else {
+            return text;
+        }   
     },
     decoder: function (text) {
-        
-        const textDecoded = text.replaceAll("enter", "e")
-            .replaceAll("imes", "i")
-            .replaceAll("ai", "a")
-            .replaceAll("ober", "o")
-            .replaceAll("ufat", "u");
+        if(text.includes("enter") || text.includes("imes") || text.includes("ai") 
+       || text.includes("ober") || text.includes("ufat")){
+            const textDecoded = text.replaceAll("enter", "e")
+                .replaceAll("imes", "i")
+                .replaceAll("ai", "a")
+                .replaceAll("ober", "o")
+                .replaceAll("ufat", "u");
 
-        return textDecoded;   
+            return textDecoded;  
+        } else {
+            return text;
+        }  
     },
+
 };
 
 // const myText = "Ele é um menino muito bonito"
@@ -26,5 +35,3 @@ const aluracrypter = {
 
 // console.log(aluracrypter.encoder(myText));
 // console.log(aluracrypter.decoder(myTextEncoded));
-
-export default aluracrypter;
