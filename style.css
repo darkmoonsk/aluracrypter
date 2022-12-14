@@ -21,6 +21,7 @@ body {
 
 .encriptador {
     display: flex;
+    margin-top: 50px;
     width: 90%;
     max-width: 1440px;
     height: 800px;
