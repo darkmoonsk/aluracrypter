@@ -33,6 +33,9 @@ const aluracrypter = {
 
 buttonEncode.onclick = () => {
     const encodedText = aluracrypter.encoder(text.value);
+    if(!encodedText){
+        return;
+    }
     output.value = encodedText;
     textNotFound.classList.add("alert-hidden");
     outputContainer.classList.remove("alert-hidden");
@@ -41,6 +44,9 @@ buttonEncode.onclick = () => {
 
 buttonDecode.onclick = () => {
     const decodedText = aluracrypter.decoder(text.value);
+    if(!decodedText){
+        return;
+    }
     output.value = decodedText;
     textNotFound.classList.add("alert-hidden");
     output.classList.remove("alert-hidden");
