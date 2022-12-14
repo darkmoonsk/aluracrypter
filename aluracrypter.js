@@ -1,4 +1,4 @@
-export const aluracrypter = {
+const aluracrypter = {
     encoder: function (text) {
        if(text.includes("e") || text.includes("i") || text.includes("a") 
        || text.includes("o") || text.includes("u")){ 
@@ -29,6 +29,8 @@ export const aluracrypter = {
     },
 
 };
+
+export default aluracrypter;
 
 // const myText = "Ele é um menino muito bonito"
 // const myTextEncoded = "Elenter é ufatm menternimesnober mufatimestober bobernimestober";
