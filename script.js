@@ -11,22 +11,21 @@ const buttonCopy = document.querySelector(".btn-copy");
 const aluracrypter = {
     encoder: function (text) {
         const textEncoded = text
-            .replaceAll("e", "enter")
-            .replaceAll("i", "imes")
-            .replaceAll("a", "ai")
-            .replaceAll("o", "ober")
-            .replaceAll("u", "ufat");
+            .replace(/e/g, "enter")
+            .replace(/i/g, "imes")
+            .replace(/a/g, "ai")
+            .replace(/o/g, "ober")
+            .replace(/u/g, "ufat");
 
         return textEncoded;
     },
     decoder: function (text) {
         const textDecoded = text
-            .replaceAll("enter", "e")
-            .replaceAll("imes", "i")
-            .replaceAll("ai", "a")
-            .replaceAll("ober", "o")
-            .replaceAll("ufat", "u");
-
+            .replace(/enter/g, "e")
+            .replace(/imes/g, "i")
+            .replace(/ai/g, "a")
+            .replace(/ober/g, "o")
+            .replace(/ufat/g, "u");
         return textDecoded;
     },
 };
@@ -59,3 +58,4 @@ buttonCopy.onclick = () => {
     navigator.clipboard.writeText(textCopied);
 };
 
+    
