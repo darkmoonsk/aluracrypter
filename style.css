@@ -110,6 +110,7 @@ body {
 
 .alert {
     display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -211,8 +212,8 @@ body {
         width: 100%
     }
 
-}
+    .btn-copy {
+        width: 100%
+    }
 
-@media (max-width: 768px) {
-    
 }
