@@ -9,6 +9,14 @@ const buttonCopy = document.querySelector(".btn-copy");
 
 
 const aluracrypter = {
+    isValidText: function (text) {
+        const pattern = /[A-ZÀ-ÿ]/;
+        if (pattern.test(text)) {
+            return false;
+        } else {
+            return true;
+        }
+    },
     encoder: function (text) {
         const textEncoded = text
             .replace(/e/g, "enter")
@@ -42,12 +50,34 @@ const resetInputAndShowOutput = (text) => {
     textInput.value = "";
 }
 
+const showError = (show) => {
+    const error = document.querySelector("#error");
+
+    if(show){
+        error.classList.add("alertError")
+    } else {
+        error.classList.remove("alertError")
+    }
+}
+
 buttonEncode.onclick = () => {
+    if (aluracrypter.isValidText(textInput.value) == false) {
+        resetInputAndShowOutput();
+        showError(true);
+        return;
+    }
+    showError(false);
     const encodedText = aluracrypter.encoder(textInput.value);
     resetInputAndShowOutput(encodedText);
 };
 
 buttonDecode.onclick = () => {
+    if (aluracrypter.isValidText(textInput.value) == false) {
+        resetInputAndShowOutput();
+        showError(true);
+        return;
+    }
+    showError(false);
     const decodedText = aluracrypter.decoder(textInput.value);
     resetInputAndShowOutput(decodedText);
 };

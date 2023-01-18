@@ -118,6 +118,13 @@ body {
     height: 20px;
 }
 
+
+.alertError{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF0000;
+}
+
 .button-box{  
     display: flex;
     gap: 20px;
