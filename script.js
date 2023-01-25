@@ -84,6 +84,10 @@ buttonDecode.onclick = () => {
 
 buttonCopy.onclick = () => {
     const textCopied = output.value;
+    buttonCopy.innerHTML = "Copiado!";
+    setTimeout(() => {
+        buttonCopy.innerHTML = "Copiar";
+    }, 2000);
     navigator.clipboard.writeText(textCopied);
 };
 
